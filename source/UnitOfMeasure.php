@@ -29,11 +29,39 @@ class UnitOfMeasure implements UnitOfMeasureInterface
     {
         return new static(
             $name,
-            function ($valueInNativeUnit) use ($toNativeUnitFactor) {
-                return $valueInNativeUnit / $toNativeUnitFactor;
+            function ($valueInNativeUnit) use ($toNativeUnitFactor, $name) {
+                return (float)bcdiv(
+                    (string)number_format(
+                        $valueInNativeUnit,
+                        16,
+                        '.',
+                        ''
+                    ),
+                    (string)number_format(
+                        $toNativeUnitFactor,
+                        16,
+                        '.',
+                        ''
+                    ),
+                    16
+                );
             },
             function ($valueInThisUnit) use ($toNativeUnitFactor) {
-                return $valueInThisUnit * $toNativeUnitFactor;
+                return (float)bcmul(
+                    (string)number_format(
+                        $valueInThisUnit,
+                        16,
+                        '.',
+                        ''
+                    ),
+                    (string)number_format(
+                        $toNativeUnitFactor,
+                        16,
+                        '.',
+                        ''
+                    ),
+                    16
+                );
             }
         );
     }

@@ -58,18 +58,6 @@ class AngleTest extends AbstractPhysicalQuantityTestCase
         'prad',
         'picoradian',
         'picoradians',
-        'frad',
-        'femtoradian',
-        'femtoradians',
-        'arad',
-        'attoradian',
-        'attoradians',
-        'zrad',
-        'zeptoradian',
-        'zeptoradians',
-        'yrad',
-        'yoctoradian',
-        'yoctoradians',
         'deg',
         '°',
         'degree',
@@ -122,18 +110,6 @@ class AngleTest extends AbstractPhysicalQuantityTestCase
         'pdeg',
         'picodegree',
         'picodegrees',
-        'fdeg',
-        'femtodegree',
-        'femtodegrees',
-        'adeg',
-        'attodegree',
-        'attodegrees',
-        'zdeg',
-        'zeptodegree',
-        'zeptodegrees',
-        'ydeg',
-        'yoctodegree',
-        'yoctodegrees',
         'arcmin',
         '′',
         'arcminute',
@@ -222,31 +198,6 @@ class AngleTest extends AbstractPhysicalQuantityTestCase
         'nanoarcseconds',
         'nasec',
         'nas',
-        'picoarcsec',
-        'picoarcsecond',
-        'picoarcseconds',
-        'pasec',
-        'pas',
-        'femtoarcsec',
-        'femtoarcsecond',
-        'femtoarcseconds',
-        'fasec',
-        'fas',
-        'attoarcsec',
-        'attoarcsecond',
-        'attoarcseconds',
-        'aasec',
-        'aas',
-        'zeptoarcsec',
-        'zeptoarcsecond',
-        'zeptoarcseconds',
-        'zasec',
-        'zas',
-        'yoctoarcsec',
-        'yoctoarcsecond',
-        'yoctoarcseconds',
-        'yasec',
-        'yas',
     ];
 
     protected function instantiateTestQuantity()
@@ -257,12 +208,12 @@ class AngleTest extends AbstractPhysicalQuantityTestCase
     public function testToDegrees()
     {
         $angle = new Angle(2 * M_PI, 'rad');
-        $this->assertEquals(360, $angle->toUnit('deg'));
+        $this->assertEqualsWithDelta(360, $angle->toUnit('deg'), 0.00000001);
     }
 
     public function testToRadians()
     {
         $angle = new Angle(720, 'degree');
-        $this->assertEquals(M_PI * 4, $angle->toUnit('rad'));
+        $this->assertEqualsWithDelta(M_PI * 4, $angle->toUnit('rad'), 0.00000001);
     }
 }

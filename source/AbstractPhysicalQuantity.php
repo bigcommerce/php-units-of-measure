@@ -246,7 +246,7 @@ abstract class AbstractPhysicalQuantity implements PhysicalQuantityInterface
         }
         return false;
     }
-    
+
     /**
      * @see \PhpUnitsOfMeasure\PhysicalQuantityInterface::listAllUnits
      */
@@ -262,7 +262,7 @@ abstract class AbstractPhysicalQuantity implements PhysicalQuantityInterface
 
     /**
      * Get the unit definition array
-     * @return Array $unitDefinitions
+     * @return array $unitDefinitions
      */
     public static function getUnitDefinitions()
     {

@@ -41,14 +41,6 @@ class LuminousIntensityTest extends AbstractPhysicalQuantityTestCase
         'nanocandela',
         'pcd',
         'picocandela',
-        'fcd',
-        'femtocandela',
-        'acd',
-        'attocandela',
-        'zcd',
-        'zeptocandela',
-        'ycd',
-        'yoctocandela',
     ];
 
     protected function instantiateTestQuantity()

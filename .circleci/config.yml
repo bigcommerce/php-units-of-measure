@@ -13,5 +13,4 @@ jobs:
       - run:
           name: Run tests
           command: |
-            sudo docker-php-ext-install bcmath
             sudo vendor/bin/phpunit -c tests/phpunit.xml.dist

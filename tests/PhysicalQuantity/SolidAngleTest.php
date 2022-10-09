@@ -58,18 +58,6 @@ class SolidAngleTest extends AbstractPhysicalQuantityTestCase
         'psr',
         'picosteradian',
         'picosteradians',
-        'fsr',
-        'femtosteradian',
-        'femtosteradians',
-        'asr',
-        'attosteradian',
-        'attosteradians',
-        'zsr',
-        'zeptosteradian',
-        'zeptosteradians',
-        'ysr',
-        'yoctosteradian',
-        'yoctosteradians',
     ];
 
     protected function instantiateTestQuantity()
