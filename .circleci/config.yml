@@ -1,0 +1,17 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: cimg/php:8.1.11
+    steps:
+      - checkout
+      - run:
+          name: Setup dependencies
+          command: |
+            sudo composer self-update
+            composer install -n --prefer-dist
+      - run:
+          name: Run tests
+          command: |
+            sudo docker-php-ext-install bcmath
+            sudo vendor/bin/phpunit -c tests/phpunit.xml.dist
