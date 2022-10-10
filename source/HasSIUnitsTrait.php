@@ -132,26 +132,6 @@ trait HasSIUnitsTrait
                 'long_prefix' => 'pico',
                 'factor'      => 1e-12
             ],
-            [
-                'abbr_prefix' => 'f',
-                'long_prefix' => 'femto',
-                'factor'      => 1e-15
-            ],
-            [
-                'abbr_prefix' => 'a',
-                'long_prefix' => 'atto',
-                'factor'      => 1e-18
-            ],
-            [
-                'abbr_prefix' => 'z',
-                'long_prefix' => 'zepto',
-                'factor'      => 1e-21
-            ],
-            [
-                'abbr_prefix' => 'y',
-                'long_prefix' => 'yocto',
-                'factor'      => 1e-24
-            ],
         ];
 
         // Determine the conversion factor from the no-prefix SI unit to the physical quantity's native unit

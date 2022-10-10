@@ -43,13 +43,13 @@ class VelocityTest extends AbstractPhysicalQuantityTestCase
     public function testToFeetPerSecond()
     {
         $speed = new Velocity(2, 'm/s');
-        $this->assertEquals(6.561679790026246, $speed->toUnit('ft/s'));
+        $this->assertEqualsWithDelta(6.56167979003, $speed->toUnit('ft/s'), 0.00000000001);
     }
 
     public function testToKmPerHour()
     {
         $speed = new Velocity(2, 'mph');
-        $this->assertEquals(3.2186854250516594, $speed->toUnit('km/h'));
+        $this->assertEquals(3.21868542505166, $speed->toUnit('km/h'), 0.00000000001);
     }
 
     public function testToKnot()

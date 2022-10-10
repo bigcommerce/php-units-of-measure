@@ -58,18 +58,6 @@ class QuantityTest extends AbstractPhysicalQuantityTestCase
         'pmol',
         'picomole',
         'picomoles',
-        'fmol',
-        'femtomole',
-        'femtomoles',
-        'amol',
-        'attomole',
-        'attomoles',
-        'zmol',
-        'zeptomole',
-        'zeptomoles',
-        'ymol',
-        'yoctomole',
-        'yoctomoles',
     ];
 
     protected function instantiateTestQuantity()
